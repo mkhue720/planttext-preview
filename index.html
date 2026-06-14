@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlantUML Live Preview</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>PlantUML Live Preview</h1>
+  </header>
+  <main>
+    <section class="editor">
+      <label for="uml">PlantUML:</label>
+      <textarea id="uml" spellcheck="false"></textarea>
+      <div class="controls">
+        <label for="format">Format:</label>
+        <select id="format">
+          <option value="svg">SVG</option>
+          <option value="png">PNG</option>
+        </select>
+        <button id="download">Tải xuống</button>
+      </div>
+    </section>
+    <section class="preview">
+      <label>Preview:</label>
+      <div class="imgwrap">
+        <img id="preview" alt="diagram preview" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Uses public PlantUML server at plantuml.com</small>
+  </footer>
+
+  <script src="https://unpkg.com/pako@2.1.0/dist/pako.min.js"></script>
+  <script src="https://unpkg.com/plantuml-encoder@1.4.0/plantuml-encoder.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
